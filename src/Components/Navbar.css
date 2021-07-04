@@ -46,15 +46,15 @@ a{
     font-weight: 500;
     color: #272343;
 }
-@media (max-width: 768px){
+@media (max-width: 900px){
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 4.4rem;
+        top: 4.2rem;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
-        border-radius: 10px;
+        z-index: 1;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);

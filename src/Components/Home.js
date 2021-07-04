@@ -1,6 +1,7 @@
+import ImgSlider from './ImgSlider';
 const Home = () => {
     return(
-        <h1>Home</h1>
+        <ImgSlider />
     );
 }
 export default Home;
