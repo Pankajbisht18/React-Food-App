@@ -3,7 +3,7 @@ import './css/Navbar.css'
 const Navbar = () => {
     const resNav = () => {
         const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
+        const navMenu = document.querySelector(".nav-menu1");
         function mobileMenu() {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
@@ -12,7 +12,7 @@ const Navbar = () => {
     }
     const closeRes = () => {
         const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
+        const navMenu = document.querySelector(".nav-menu1");
         function closeMenu() {
             hamburger.classList.remove("active");
             navMenu.classList.remove("active");
@@ -21,20 +21,20 @@ const Navbar = () => {
     }
     return(
         <header className="header">
-            <nav className="navbar">
-                <h3 className="nav-logo">Food Club</h3>
-                <ul className="nav-menu">
-                    <li className="nav-item">
-                        <Link to="/" className="nav-link" onClick={closeRes}>Home</Link>
+            <nav className="navbar1">
+                <h3 className="nav-logo1">Food Club</h3>
+                <ul className="nav-menu1">
+                    <li className="nav-item1">
+                        <Link to="/" className="nav-link1" onClick={closeRes}>Home</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/food" className="nav-link" onClick={closeRes}>Food</Link>
+                    <li className="nav-item1">
+                        <Link to="/food" className="nav-link1" onClick={closeRes}>Food</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/recipe" className="nav-link" onClick={closeRes}>Recipe</Link>
+                    <li className="nav-item1">
+                        <Link to="/recipe" className="nav-link1" onClick={closeRes}>Recipe</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to="/search" className="nav-link" onClick={closeRes}>Search</Link>
+                    <li className="nav-item1">
+                        <Link to="/search" className="nav-link1" onClick={closeRes}>Search</Link>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={resNav}>

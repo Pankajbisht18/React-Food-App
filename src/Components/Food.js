@@ -1,5 +1,7 @@
 import { useState } from "react";
-import {Link} from 'react-router-dom';
+import ImgSlider from './ImgSlider';
+import RecipeReviewCard from './Card';
+import './css/card.css';
 
 const Food = () => {
     const[Recipe, setRecipe] = useState([]);
@@ -16,7 +18,7 @@ const Food = () => {
             fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${Search}&app_id=eabc8ee8&app_key=4d98b1b0c4340c48bc68b1b84a839892&cuisineType=${cuisineType}`)
             .then(res=>res.json())
             .then(json=>{
-                setRecipe(json.hits)
+                setRecipe(json.hits);
             })
         }
         else{
@@ -27,11 +29,18 @@ const Food = () => {
     console.log(Recipe);
     return(
         <>
-            <div>
-                <input type="text" placeholder="Enter recipe name" onChange={handleText} />
-                <label>cuisine Type</label>
-                <select name="cuisineType" onChange={handleCusineType}>
-                    <option value=""></option>
+            <ImgSlider />
+            <div className="container text-center py-4">
+                <input 
+                    type="text" 
+                    placeholder="Enter recipe name"
+                    className="form-control" 
+                    onChange={handleText} 
+                />
+                <br />
+                <label className="fw-bold">cuisine Type</label>
+                <select name="cuisineType" className="form-select" onChange={handleCusineType}>
+                    <option value="" selected>Select cuisine Type</option>
                     <option value="American">American</option>
                     <option value="Asian">Asian</option>
                     <option value="British">British</option>
@@ -51,24 +60,27 @@ const Food = () => {
                     <option value="South American">South American</option>
                     <option value="South East Asian">South East Asian</option>
                 </select>
-                <button onClick={handleSearch}>Search</button>
+                <button className="btn btn-primary my-2" onClick={handleSearch}>Search</button>
             </div>
-            <div>
-            {
-                Recipe.map((food,id)=>{
-                    return(
-                        <div key={id}>
-                            <img src={food.recipe.image} alt={food.recipe.label}/>
-                            <h1>{food.recipe.label}</h1>
-                            <Link to="/recipe">
-                                <button className="btn">
-                                    Read Recipe
-                                </button>
-                            </Link>
-                        </div>
-                    )
-                })
-            }
+            <div className="container d-flex flex-wrap justify-content-around align-items-center">
+                {
+                    Recipe.map((food,id)=>{
+                        return(
+                            <div>
+                                    <RecipeReviewCard 
+                                        key={id}
+                                        label={food.recipe.label}
+                                        image={food.recipe.image}
+                                        mealType={food.recipe.mealType}
+                                        cuisineType={food.recipe.cuisineType}
+                                        DishType={food.recipe.dishType}
+                                        ingredient={food.recipe.ingredientLines}
+                                        url={food.recipe.url}
+                                    /> 
+                            </div>   
+                        )
+                    })
+                }
             </div>
         </>
     );
