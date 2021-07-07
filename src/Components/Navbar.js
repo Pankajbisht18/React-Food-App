@@ -28,12 +28,6 @@ const Navbar = () => {
                         <Link to="/" className="nav-link1" onClick={closeRes}>Home</Link>
                     </li>
                     <li className="nav-item1">
-                        <Link to="/food" className="nav-link1" onClick={closeRes}>Food</Link>
-                    </li>
-                    <li className="nav-item1">
-                        <Link to="/recipe" className="nav-link1" onClick={closeRes}>Recipe</Link>
-                    </li>
-                    <li className="nav-item1">
                         <Link to="/search" className="nav-link1" onClick={closeRes}>Search</Link>
                     </li>
                 </ul>
