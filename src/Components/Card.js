@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -89,7 +89,7 @@ const RecipeReviewCard = ({
             <Typography paragraph>
               {ingredient}
             </Typography>
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
               <Button variant="contained" color="secondary">
                 Read Recipe
               </Button>
@@ -97,6 +97,7 @@ const RecipeReviewCard = ({
         </CardContent>
       </Collapse>
     </Card>
+    
   );
 }
 export default RecipeReviewCard;

@@ -20,6 +20,9 @@
     margin-top: 100px;
     filter: drop-shadow(7px 7px 7px #666666);
 }
+.contact{
+    width: 50%;
+}
 @media (max-width:1500px){
     .home-content p{
         font-size: 22px;
@@ -49,6 +52,9 @@
         margin-top: 20px;
         filter: drop-shadow(7px 7px 7px #666666);
     }
+    .contact{
+        width: 80%;
+    }
 }
 @media (max-width:700px){
     .home-food > div {
@@ -71,7 +77,10 @@
     } 
     .home-content h1{
         font-size: 50px;
-    }  
+    } 
+    .contact{
+        width: 90%;
+    } 
 }
 @media (max-width:380px){
     .home-food > div {

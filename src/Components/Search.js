@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImgSlider from './ImgSlider';
 import RecipeReviewCard from './Card';
+import Footer from './Footer';
 import './css/card.css';
 
 const Search = () => {
@@ -30,7 +31,7 @@ const Search = () => {
     return(
         <>
             <ImgSlider />
-            <div className="container text-center py-5">
+            <div className="container text-center py-5 contact">
                 <h1>Search</h1>
                 <input 
                     type="text" 
@@ -83,6 +84,7 @@ const Search = () => {
                     })
                 }
             </div>
+            <Footer />
         </>
     );
 }
