@@ -22,13 +22,23 @@ const Navbar = () => {
     return(
         <header className="header">
             <nav className="navbar1">
-                <h3 className="nav-logo1">Food Club</h3>
+                <h3 className="nav-logo1">
+                    <Link to="/">
+                        Food Club
+                    </Link>
+                </h3>
                 <ul className="nav-menu1">
                     <li className="nav-item1">
                         <Link to="/" className="nav-link1" onClick={closeRes}>Home</Link>
                     </li>
                     <li className="nav-item1">
                         <Link to="/search" className="nav-link1" onClick={closeRes}>Search</Link>
+                    </li>
+                    <li className="nav-item1">
+                        <a href="#about" className="nav-link1">About</a>
+                    </li>
+                    <li className="nav-item1">
+                        <a href="#contact" className="nav-link1">Contact us</a>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={resNav}>

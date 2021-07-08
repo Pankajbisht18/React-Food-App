@@ -21,7 +21,7 @@ const Home = () => {
                     <img src="/images/food.jpg" alt="Food" />
                 </div>
             </div>
-            <div className="home-food">
+            <div className="home-food" id="about">
                 <div className="home-image">
                     <img src="/images/About us.jpg" alt="Food" />
                 </div>
@@ -47,7 +47,7 @@ const Home = () => {
                 }}
             >   
             </div>
-            <div className="container my-5 contact">
+            <div className="container my-5 contact" id="contact">
                 <h1 className="text-center">Contact Us</h1>
                 <form>
                     <input 
