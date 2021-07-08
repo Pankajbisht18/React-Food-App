@@ -97,7 +97,6 @@ const RecipeReviewCard = ({
         </CardContent>
       </Collapse>
     </Card>
-    
   );
 }
 export default RecipeReviewCard;
