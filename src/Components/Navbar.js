@@ -34,12 +34,6 @@ const Navbar = () => {
                     <li className="nav-item1">
                         <Link to="/search" className="nav-link1" onClick={closeRes}>Search</Link>
                     </li>
-                    <li className="nav-item1">
-                        <a href="#about" className="nav-link1">About</a>
-                    </li>
-                    <li className="nav-item1">
-                        <a href="#contact" className="nav-link1">Contact us</a>
-                    </li>
                 </ul>
                 <div className="hamburger" onClick={resNav}>
                     <span className="bar"></span>
