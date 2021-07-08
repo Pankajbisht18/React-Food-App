@@ -11,6 +11,7 @@ const ImgSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
+        pauseOnHover: false
     };
     return(
         <Slider {...settings} className="slider">
