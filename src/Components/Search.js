@@ -18,16 +18,12 @@ const Search = () => {
         if(cuisineType!=='') {
             fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${Search}&app_id=eabc8ee8&app_key=4d98b1b0c4340c48bc68b1b84a839892&cuisineType=${cuisineType}`)
             .then(res=>res.json())
-            .then(json=>{
-                setRecipe(json.hits);
-            })
+            .then(json=>setRecipe(json.hits));
         }
         else{
             alert("Select Cuisine Type");
         }
     }
-    
-    console.log(Recipe);
     return(
         <>
             <ImgSlider />
@@ -35,14 +31,14 @@ const Search = () => {
                 <h1>Search</h1>
                 <input 
                     type="text" 
-                    placeholder="Enter recipe name"
+                    placeholder="Enter Recipe Name, Eg: Burger, Pizza, etc...."
                     className="form-control" 
                     onChange={handleText} 
                 />
                 <br />
                 <label className="fw-bold">cuisine Type</label>
                 <select name="cuisineType" className="form-select" onChange={handleCusineType}>
-                    <option value="" selected>Select cuisine Type</option>
+                    <option value="" selected>Select Cuisine Type</option>
                     <option value="American">American</option>
                     <option value="Asian">Asian</option>
                     <option value="British">British</option>
